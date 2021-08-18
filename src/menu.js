@@ -4,64 +4,72 @@ function createMenu() {
 
   menu.appendChild(
     createMenuItem(
-      "The Vermonter",
-      "Bacon, Fried Egg, Cheddar, Caramelized Onion"
+      "redvelvet",
+      "Red Velvet",
+      "Georgetown Cupcake’s signature cupcake – classic red velvet cupcake with a vanilla cream cheese frosting topped with a red fondant heart"
     )
   );
 
   menu.appendChild(
     createMenuItem(
-      "The Vermonter",
-      "Bacon, Fried Egg, Cheddar, Caramelized Onion"
+      "chocolatevanilla",
+      "Chocolate & Vanilla",
+      "Valrhona chocolate cupcake with a vanilla cream cheese frosting topped with French chocolate sprinkles"
     )
   );
 
   menu.appendChild(
     createMenuItem(
-      "The Vermonter",
-      "Bacon, Fried Egg, Cheddar, Caramelized Onion"
+      "vanillabirthday",
+      "Vanilla Birthday",
+      "Classic Madagascar vanilla cupcake topped with a traditional sweet vanilla buttercream frosting and rainbow sprinkles"
     )
   );
 
   menu.appendChild(
     createMenuItem(
-      "The Vermonter",
-      "Bacon, Fried Egg, Cheddar, Caramelized Onion"
+      "vanillachocolate",
+      "Vanilla & Chocolate",
+      "Classic Madagascar vanilla cupcake with a whipped Callebaut chocolate frosting topped with a fondant flower or other seasonal decoration"
     )
   );
 
   menu.appendChild(
     createMenuItem(
-      "The Vermonter",
-      "Bacon, Fried Egg, Cheddar, Caramelized Onion"
+      "chocolatebirthday",
+      "Milk Chocolate Birthday",
+      "Classic Madagascar vanilla cake topped with a milk chocolate buttercream frosting and rainbow sprinkles"
     )
   );
 
   menu.appendChild(
     createMenuItem(
-      "The Vermonter",
-      "Bacon, Fried Egg, Cheddar, Caramelized Onion"
+      "doublebirthday",
+      "Double Milk Chocolate Birthday",
+      "Valrhona chocolate cupcake topped with milk chocolate buttercream frosting and rainbow sprinkles"
     )
   );
 
   menu.appendChild(
     createMenuItem(
-      "The Vermonter",
-      "Bacon, Fried Egg, Cheddar, Caramelized Onion"
+      "chocolateganache",
+      "Chocolate Ganache",
+      "Valrhona chocolate cupcake with a thin layer of Callebaut chocolate ganache icing topped with a fondant flower or other seasonal decoration in assorted colors"
     )
   );
 
   menu.appendChild(
     createMenuItem(
-      "The Vermonter",
-      "Bacon, Fried Egg, Cheddar, Caramelized Onion"
+      "vanilla",
+      "Vanilla",
+      "Classic madagascar bourbon vanilla cupcake with a vanilla cream cheese frosting topped with a fondant flower or other seasonal decoration in assorted colors"
     )
   );
 
   return menu;
 }
 
-function createMenuItem(name, set) {
+function createMenuItem(imageName, name, set) {
   const menuItem = document.createElement("div");
   menuItem.classList.add("menu-item");
 
@@ -71,6 +79,11 @@ function createMenuItem(name, set) {
   const itemSet = document.createElement("p");
   itemSet.textContent = set;
 
+  const itemImage = document.createElement("img");
+  itemImage.src = `images/menu/${imageName}.png`;
+  itemImage.alt = `${name}`;
+
+  menuItem.appendChild(itemImage);
   menuItem.appendChild(itemName);
   menuItem.appendChild(itemSet);
 

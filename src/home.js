@@ -2,14 +2,14 @@ function createHome() {
   const home = document.createElement("div");
   home.classList.add("home");
 
-  const burgerImage = document.createElement("img");
-  burgerImage.src = "images/burger.jpg";
-  burgerImage.alt = "Burger";
+  const homeImage = document.createElement("img");
+  homeImage.src = "images/homepage.jpg";
+  homeImage.alt = "Homepage";
 
-  home.appendChild(createText("You haven't had a burger like ours"));
-  home.appendChild(burgerImage);
-  home.appendChild(createText("Made with 100% locally sourced products"));
-  home.appendChild(createText("12 oz of real grass-fed beef"));
+  home.appendChild(createText("You haven't had a cupcake like ours"));
+  home.appendChild(homeImage);
+  home.appendChild(createText("Ten time World Cupcake Champions!"));
+  home.appendChild(createText("Made with love right here in Morrisville"));
 
   return home;
 };
