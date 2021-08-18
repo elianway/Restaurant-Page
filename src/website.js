@@ -7,6 +7,7 @@ function createHeader() {
   header.classList.add("header");
 
   const restaurantName = document.createElement("h1");
+  restaurantName.classList.add("restaurant-name");
   restaurantName.textContent = "Georgetown Cupcake";
 
   header.appendChild(restaurantName);
@@ -19,7 +20,7 @@ function createNav() {
   const nav = document.createElement("nav");
 
   const homeButton = document.createElement("button");
-  homeButton.classList.add("nav-button");
+  homeButton.classList.add("button-nav");
   homeButton.textContent = "Home";
   homeButton.addEventListener("click", (e) => {
     if (e.target.classList.contains("active")) return;
@@ -28,7 +29,7 @@ function createNav() {
   });
 
   const menuButton = document.createElement("button");
-  menuButton.classList.add("nav-button");
+  menuButton.classList.add("button-nav");
   menuButton.textContent = "Menu";
   menuButton.addEventListener("click", (e) => {
     if (e.target.classList.contains("active")) return;
@@ -37,7 +38,7 @@ function createNav() {
   });
 
   const contactButton = document.createElement("button");
-  contactButton.classList.add("nav-button");
+  contactButton.classList.add("button-nav");
   contactButton.textContent = "Contact";
   contactButton.addEventListener("click", (e) => {
     if (e.target.classList.contains("active")) return;
@@ -53,7 +54,7 @@ function createNav() {
 }
 
 function setActiveButton(button) {
-  const buttons = document.querySelectorAll(".nav-button");
+  const buttons = document.querySelectorAll(".button-nav");
 
   buttons.forEach((button) => {
     if (button !== this) {
@@ -90,7 +91,7 @@ function initializeWebsite() {
   content.appendChild(createMain());
   content.appendChild(createFooter());
 
-  setActiveButton(document.querySelector(".nav-button"));
+  setActiveButton(document.querySelector(".button-nav"));
   loadHome();
 }
 

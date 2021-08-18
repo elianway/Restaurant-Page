@@ -6,7 +6,7 @@ function createHome() {
   homeImage.src = "images/homepage.jpg";
   homeImage.alt = "Homepage";
 
-  home.appendChild(createText("You haven't had a cupcake like ours"));
+  home.appendChild(createText("You haven't had a cupcake like ours!"));
   home.appendChild(homeImage);
   home.appendChild(createText("Ten time World Cupcake Champions!"));
   home.appendChild(createText("Made with love right here in Morrisville"));

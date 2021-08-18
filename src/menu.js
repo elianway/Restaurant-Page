@@ -73,7 +73,7 @@ function createMenuItem(imageName, name, set) {
   const menuItem = document.createElement("div");
   menuItem.classList.add("menu-item");
 
-  const itemName = document.createElement("h2");
+  const itemName = document.createElement("h4");
   itemName.textContent = name;
 
   const itemSet = document.createElement("p");
