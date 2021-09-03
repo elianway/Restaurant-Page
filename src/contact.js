@@ -10,7 +10,7 @@ function createContact() {
 
   const mapImage = document.createElement("img");
   mapImage.src = "images/map.png"
-  mapImage.alt = "Georgetown Cupcake Map Location";
+  mapImage.alt = "YumYum Cupcake Map Location";
 
   contact.appendChild(tagLine);
   contact.appendChild(phoneNumber);
